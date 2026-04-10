@@ -1,0 +1,24 @@
+     @font-face { font-family: 'Eczar';
+     src: url('SiteRscs/Eczar.ttf') format('TrueType'); }
+
+body { 
+          background-color: #000000;
+        }
+h1 {
+      color: #971f28;        
+      margin-left: 30px;
+      font-family: 'Eczar', serif;
+      font-size: 48px;
+      margin-left: 200px;
+      text-decoration: underline;
+    }
+.title-row {
+      display: flex;
+      align-items: left;
+    }
+.title-row img {
+      width: 150px;
+      height: auto;
+      margin-left: 0;
+      margin-right: 12px;
+    }
