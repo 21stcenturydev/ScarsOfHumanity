@@ -1,24 +1,89 @@
-     @font-face { font-family: 'Eczar';
-     src: url('SiteRscs/Eczar.ttf') format('TrueType'); }
+/* -------------------------------------------------------------------------- */
+/* Fonts                                                                      */
+/* -------------------------------------------------------------------------- */
 
-body { 
-          background-color: #000000;
-        }
-h1 {
-      color: #971f28;        
-      margin-left: 30px;
-      font-family: 'Eczar', serif;
-      font-size: 48px;
-      margin-left: 200px;
-      text-decoration: underline;
-    }
+@font-face {
+    font-family: 'Eczar';
+    src: url('SiteRscs/Eczar.ttf') format('TrueType');
+}
+
+/* -------------------------------------------------------------------------- */
+/* Page base                                                                  */
+/* -------------------------------------------------------------------------- */
+
+body {
+    position: relative;
+    background-color: #000000;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Title row (logo + site title)                                              */
+/* -------------------------------------------------------------------------- */
+
 .title-row {
-      display: flex;
-      align-items: left;
-    }
-.title-row img {
-      width: 150px;
-      height: auto;
-      margin-left: 0;
-      margin-right: 12px;
-    }
+    display: flex;
+    align-items: flex-start;
+}
+
+.title-row__logo img {
+    width: 150px;
+    height: auto;
+    margin-left: 0;
+}
+
+.title-row__heading h1 {
+    color: #a2000c;
+    margin-left: 30px;
+    font-family: 'Eczar', serif;
+    font-size: 46px;
+    
+    text-decoration: underline;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* Main content (hero image + tagline)                                        */
+/* -------------------------------------------------------------------------- */
+
+.main-content {
+    color: white;
+  
+}
+
+.main-content__tagline {
+    margin-top: 20px;
+    margin-left: 180px;
+    font-family: 'Eczar', serif;
+    font-size: 16px;
+}
+
+.site-links {
+  
+  margin-left: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.site-links a {
+    color: #a2000c;
+    font-family: 'Eczar', serif;
+    font-size: 1.25rem;
+}
+
+.main-content__angel { 
+  position: absolute;
+  top: 0;
+  right: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.main-content__angel img  {
+
+  width: 450px;
+  height: auto;
+  display: block;
+}
+
+/* Maybe make it in header, with overflow?
