@@ -15,75 +15,98 @@ body {
     position: relative;
     background-color: #000000;
 }
-
-/* -------------------------------------------------------------------------- */
-/* Title row (logo + site title)                                              */
-/* -------------------------------------------------------------------------- */
-
 .title-row {
-    display: flex;
-    align-items: flex-start;
+   margin-top: 0;
+  display: flex;
+  align-items: flex-start;
 }
 
 .title-row__logo img {
-    width: 150px;
-    height: auto;
-    margin-left: 0;
+  max-width: 100%;
+  width: 9.375rem;
+  height: auto;
+  margin-left: 0;
 }
 
 .title-row__heading h1 {
-    color: #a2000c;
-    margin-left: 30px;
-    font-family: 'Eczar', serif;
-    font-size: 46px;
-    
-    text-decoration: underline;
+   margin-top: 0;
+  color: #a2000c;
+  margin-left: 1.875rem;
+  font-family: 'Eczar', serif;
+  font-size: 2.875rem;
+  text-decoration: underline;
 }
 
-
-/* -------------------------------------------------------------------------- */
-/* Main content (hero image + tagline)                                        */
-/* -------------------------------------------------------------------------- */
-
 .main-content {
-    color: white;
-  
+  color: white;
+  position: relative;
 }
 
 .main-content__tagline {
-    margin-top: 20px;
-    margin-left: 180px;
-    font-family: 'Eczar', serif;
-    font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 11.25rem;
+  margin-right: 11.875rem;
+  font-family: 'Eczar', serif;
+  font-size: 1rem;
 }
 
 .site-links {
-  
-  margin-left: 180px;
+  margin-left: 11.25rem;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 1rem;
 }
-
 .site-links a {
-    color: #a2000c;
-    font-family: 'Eczar', serif;
-    font-size: 1.25rem;
+  color: #a2000c;
+  font-family: 'Eczar', serif;
+  font-size: 1.25rem;
 }
 
-.main-content__angel { 
+.main-content__angel {
   position: absolute;
   top: 0;
   right: 0;
-  pointer-events: none;
+  max-width: min(450px, 45%);
   z-index: 1;
 }
 
-.main-content__angel img  {
-
-  width: 450px;
-  height: auto;
+.main-content__angel img {
   display: block;
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+}
+@media (max-width: 700px) {
+  .main-content__angel {
+    position: absolute; /* keep it */
+    top: 0;
+    right: 0;
+    max-width: 10rem; /* smaller; try 6rem–9rem */
+  }
+
+  .main-content__angel img {
+    max-width: 10rem;
+  }
+
+  .title-row__heading h1 {
+    margin-right: 8rem; /* clears the small angel; tweak */
+    font-size: clamp(1.75rem, 8vw, 2.875rem);
+  }
+
+  .main-content__tagline,
+  .site-links {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+/* Maybe make it in header, with overflow?
+ *
+
+ */ 
+
+.bottom  {
+
 }
 
-/* Maybe make it in header, with overflow?
