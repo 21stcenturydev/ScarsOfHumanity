@@ -1,0 +1,1 @@
+//FOR VARIABLES & Long Prayers
